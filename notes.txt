@@ -1,0 +1,4 @@
+Controller(s) -> Service, POJO
+Service -> Repository
+Repository -> POJO
+
