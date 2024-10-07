@@ -31,10 +31,24 @@ public class AttemptController {
      * @param attempt an attempt as sent by front
      * @return score
      */
-    @PostMapping
-    @RequestMapping("/score")
-    public Attempt showAttemptEvaluation(@RequestBody SurveyAttempt attempt) {
-        System.out.println(attempt.toString());
-        return attemptService.save(attempt);
+    @GetMapping("/score/{attemptId}")
+    public PercentageResponse showAttemptEvaluation(@PathVariable Long attemptId) {
+        return new PercentageResponse(88);
+    }
+
+    public static class PercentageResponse {
+        private double percentage;
+
+        public PercentageResponse(double percentage) {
+            this.percentage = percentage;
+        }
+
+        public double getPercentage() {
+            return percentage;
+        }
+
+        public void setPercentage(double percentage) {
+            this.percentage = percentage;
+        }
     }
 }
