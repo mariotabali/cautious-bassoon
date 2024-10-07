@@ -1,16 +1,8 @@
-const url = 'http://localhost:8080/api/attempt';
+const url = 'http://localhost:8080/api/surveys'; //or surveys
 const data = {
-    testId: 1,
-    answers: [
-        {
-            questionId: 1,
-            answer: "mcenroy",
-        },
-        {
-            questionId: 2,
-            answer: "hello",
-        },
-    ],
+  statement: 'John',
+  badOptions: ["mcenroy", "fruciante"],
+  rightOption: "connor",
 };
 
 fetch(url, {
