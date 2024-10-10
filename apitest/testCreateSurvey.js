@@ -1,10 +1,10 @@
 const url = 'http://localhost:8080/api/surveys'; //or surveys
 const data = {
-  title: "Prueba 1",
+  title: "Prueba 2",
   questions: [{
       statement: 'John',
-      badOptions: ["mcenroy", "fruciante"],
-      rightOption: "connor",
+      badOptions: ["mcenroy", "smith", "lennon"],
+      rightOption: "lennon",
   }]};
 
 fetch(url, {
