@@ -1,9 +1,11 @@
 const url = 'http://localhost:8080/api/surveys'; //or surveys
 const data = {
-  statement: 'John',
-  badOptions: ["mcenroy", "fruciante"],
-  rightOption: "connor",
-};
+  title: "Prueba 1",
+  questions: [{
+      statement: 'John',
+      badOptions: ["mcenroy", "fruciante"],
+      rightOption: "connor",
+  }]};
 
 fetch(url, {
   method: 'POST', // Specify the request method as POST

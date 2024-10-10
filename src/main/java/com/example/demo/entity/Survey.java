@@ -14,7 +14,11 @@ public class Survey {
 
     private String title;
 
-    @ManyToMany
+    public void setQuestions(Set<Question> questions) {
+        this.questions = questions;
+    }
+
+    @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(
             name = "survey_questions",
             joinColumns = @JoinColumn(name = "survey_id"),
